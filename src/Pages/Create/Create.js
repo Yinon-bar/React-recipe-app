@@ -12,6 +12,11 @@ function Create() {
     e.preventDefault();
     console.log(title, method, cookingTime);
   };
+  const handleAdd = (e) => {
+    e.preventDefault();
+    setIngredients([...ingredients, newIngredient]);
+    console.log(ingredients);
+  };
 
   return (
     <div className="create">
@@ -37,7 +42,9 @@ function Create() {
               onChange={(e) => setNewIngredient(e.target.value)}
               value={newIngredient}
             />
-            <button className="btn">add</button>
+            <button onClick={handleAdd} className="btn">
+              add
+            </button>
           </div>
         </label>
 
