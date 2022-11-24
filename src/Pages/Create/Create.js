@@ -14,7 +14,7 @@ function Create() {
   };
   const handleAdd = (e) => {
     e.preventDefault();
-    setIngredients([...ingredients, newIngredient]);
+    setIngredients((p) => [...p, newIngredient]);
     console.log(ingredients);
   };
 
