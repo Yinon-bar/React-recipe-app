@@ -3,7 +3,7 @@ import { useFetch } from "../../Hooks/useFetch";
 import "./Home.css";
 
 function Home() {
-  const { data, isPending, error } = useFetch("http://localhost:3000/recipes");
+  const { data, isPending, error } = useFetch("http://localhost:3004/recipes");
 
   return (
     <div className="home">
